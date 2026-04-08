@@ -1,0 +1,19 @@
+@import 'src/style/var.less';
+
+
+.collapse {
+  border-radius: 0;
+  
+  :global {
+    .ant-collapse-header {
+      display: none !important;
+    }
+    .ant-collapse-item-active {
+      border-bottom: 1px solid @color-gray-8 !important;
+      border-radius: 0 !important;
+    }
+    .ant-collapse-content-box {
+      padding: 0 !important;
+    }
+  }
+}

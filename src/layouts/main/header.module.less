@@ -1,0 +1,48 @@
+.header {
+  padding: 0 !important;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+
+.menuButton {
+  height: 56px;
+  padding-right: 12px !important;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.logo {
+  margin-left: 8px;
+}
+
+.logoLink {
+  height: 46px;
+}
+
+.separator {
+  height: 24px;
+  width: 1px;
+  margin: 0 20px;
+  background: #b1b1b1;
+}
+
+.moduleName {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--digio-color-gray-4);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.globalActions {
+  margin-right: 8px;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 16px;
+}

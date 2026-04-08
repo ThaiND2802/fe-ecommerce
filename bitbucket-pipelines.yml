@@ -1,0 +1,11 @@
+pipelines:
+  pull-requests:
+    feature/*:
+      import: pipeline-templates:dev:precheck-pipeline
+    '*':
+      import: pipeline-templates:dev:precheck-pipeline
+  branches:
+    dev:
+      import: pipeline-templates:dev:dev-static-web-pipeline
+    qc:
+      import: pipeline-templates:dev:qc-static-web-pipeline

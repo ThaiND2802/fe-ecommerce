@@ -1,0 +1,23 @@
+@color-gray-9: var(--digio-color-gray-9, #ededf0);
+@color-gray-3: var(--digio-color-gray-3, #363a4a);
+
+.menu {
+  background: none;
+  border-inline-end: none !important;
+
+  :global {
+    .ant-menu-sub.ant-menu-inline {
+      background: none !important;
+    }
+
+    .ant-menu-submenu-title,
+    .ant-menu-item {
+      margin: 0 !important;
+      color: @color-gray-3 !important;
+
+      &:hover {
+        background-color: @color-gray-9 !important;
+      }
+    }
+  }
+}

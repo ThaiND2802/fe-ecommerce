@@ -1,0 +1,3 @@
+export enum LOCAL_STORAGE_KEY {
+  FCM_TOKEN = 'FCM_TOKEN',
+}

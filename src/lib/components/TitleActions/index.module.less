@@ -1,0 +1,33 @@
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  flex: 1;
+  padding-right: 10px;
+  align-self: center;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.actions {
+  gap: 10px;
+  align-items: center;
+
+  :global {
+    .ant-divider {
+      margin-inline: 0;
+      min-height: 19px;
+    }
+    .oicon,
+    .iconsax {
+      font-size: 20px;
+      flex-shrink: 0;
+
+      &:hover {
+        color: var(--digio-brand-primary);
+        cursor: pointer;
+      }
+    }
+  }
+}

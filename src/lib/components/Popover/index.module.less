@@ -1,0 +1,35 @@
+@import '../../styles/var.less';
+
+.popoverBody {
+  padding: 0 !important;
+
+  :global {
+    .ant-popover-title {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid @color-gray-8;
+      padding: 16px 20px 16px 24px;
+      margin-bottom: 0;
+    }
+
+    .ant-popover-inner-content {
+      padding: 20px 0;
+    }
+  }
+}
+
+.title {
+  flex: 1;
+  min-width: 0;
+  padding-right: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.actions {
+  :global {
+    .ant-btn {
+      font-weight: 600;
+    }
+  }
+}

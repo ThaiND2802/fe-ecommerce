@@ -1,0 +1,85 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  padding: 125px 103px 125px 125px;
+  color: #3a424a;
+  // background:
+  //   linear-gradient(180deg, rgba(17, 24, 39, 0.16) 0%, rgba(17, 24, 39, 0.34) 100%),
+  //   linear-gradient(135deg, #eef4ff 0%, #cfdcff 40%, #b4cdfd 100%);
+  background: url('src/assets/images/cafe.webp');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(0, 0, 0, 0.6));
+}
+
+.hero__quoteMark {
+  position: relative;
+  z-index: 1;
+  width: 123px;
+  height: 86px;
+  color: rgba(2, 47, 82, 0.06);
+  font-weight: 700;
+  font-size: 140px;
+  line-height: 0.62;
+}
+
+.hero__content {
+  position: absolute;
+  top: 159px;
+  right: 103px;
+  left: 153px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  max-width: 550px;
+}
+
+.hero__title {
+  width: 100%;
+  margin: 0;
+  color: #3a424a;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: -0.64px;
+}
+
+.hero__title strong {
+  color: #3062d4;
+  font-weight: 600;
+}
+
+.hero__author {
+  margin-right: 50px;
+  color: #3a424a;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.48px;
+
+  @media (max-width: 756px) {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero {
+    padding-right: 64px;
+  }
+
+  .hero__content {
+    right: 64px;
+  }
+}

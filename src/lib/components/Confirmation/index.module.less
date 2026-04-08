@@ -1,0 +1,28 @@
+@color-red: var(--digio-color-red, #e14851);
+
+.body {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  row-gap: 16px;
+
+  &.noIcon {
+    padding: 0 20px 0 0;
+  }
+}
+
+.iconOuter {
+  width: 54px;
+  height: 54px;
+  border-radius: 54px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: @color-red;
+}
+
+.content {
+  font-weight: 600;
+}

@@ -1,0 +1,71 @@
+@import '../../styles/var.less';
+
+.searchInput {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: @color-white;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.columnDraggableList {
+  margin-bottom: 10px;
+}
+
+.columnItemInner {
+  display: flex;
+  column-gap: 2px;
+  align-items: center;
+  padding: 6px 0;
+
+  &:hover {
+    background-color: @color-gray-11;
+  }
+
+  &.dragging {
+    background-color: @color-white;
+    padding: 6px;
+    border-radius: 4px;
+    min-width: 200px;
+
+    .dragHandle {
+      opacity: 0;
+    }
+
+    .columnItemSwitch {
+      display: none;
+    }
+  }
+}
+
+.columnItemLabel {
+  flex: 1;
+  line-height: 20px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.sectionAction {
+  font-weight: 300;
+  padding: 0;
+  height: auto;
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.columnList {
+  padding-bottom: 16px;
+  flex-direction: column;
+}

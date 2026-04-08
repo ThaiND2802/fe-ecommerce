@@ -1,0 +1,108 @@
+@color-gray-9: var(--digio-color-gray-9, #ededf0);
+@color-gray-3: var(--digio-color-gray-3, #363a4a);
+@color-brand-9: var(--digio-brand-9, #e4f2f9);
+@color-primary: var(--digio-brand-primary);
+
+.menuWrapper {
+  padding: 16px 8px 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-x: hidden;
+}
+
+.itemStyle {
+  font-weight: 600;
+  color: @color-gray-3;
+  width: 100%;
+  display: flex;
+}
+
+.menuOuter {
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+
+  :global {
+    .simplebar-content-wrapper {
+      padding-right: var(--right-padding);
+    }
+  }
+}
+
+.menu {
+  :global {
+    .ant-menu-item {
+      .itemStyle();
+      padding-left: 12px !important;
+      padding-inline-end: 0 !important;
+      line-height: 44px !important;
+      height: 44px !important;
+    }
+
+    .ant-menu-item-only-child {
+      font-weight: 400;
+      padding-left: 42px !important;
+      padding-right: 0 !important;
+      line-height: 40px !important;
+      height: 40px !important;
+
+      &:hover {
+        :local(.menuIcon) {
+          display: block;
+        }
+      }
+    }
+
+    .ant-menu-submenu-selected {
+      .ant-menu-submenu-title {
+        color: @color-primary !important;
+      }
+    }
+
+    .ant-menu-submenu-title {
+      .itemStyle();
+      padding-left: 12px !important;
+      padding-inline-end: 0 !important;
+      line-height: 44px !important;
+      height: 44px !important;
+
+      .ant-menu-title-content {
+        padding-right: 30px;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background-color: @color-brand-9;
+    }
+
+    .ant-menu-item-selected:not(.ant-menu-item-only-child) {
+      background-color: @color-brand-9;
+      color: @color-primary !important;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 11px;
+        bottom: 11px;
+        width: 3px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background: @color-primary;
+      }
+    }
+  }
+
+  :global(.ant-layout-sider-collapsed) & {
+    :global {
+      .ant-menu-item,
+      .ant-menu-submenu {
+        margin-bottom: 10px !important;
+      }
+    }
+  }
+}

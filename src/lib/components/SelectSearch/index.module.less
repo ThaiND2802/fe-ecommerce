@@ -1,0 +1,21 @@
+@import '../../styles/var.less';
+
+.select {
+  &:global(.ant-select-disabled) {
+    :global {
+      .ant-select-selection-item {
+        color: @color-gray-4 !important;
+      }
+    }
+  }
+
+  &.defaultCursor {
+    :global {
+      .ant-select-selector,
+      .ant-select-selection-item,
+      .ant-select-selection-search-input {
+        cursor: default !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import 'src/style/var.less';
+
+@item-width: 98px;
+
+.popover {
+  :global {
+    .ant-popover-inner {
+      padding: 0 !important;
+    }
+
+    .ant-popover-inner-content {
+      padding: 16px 0;
+    }
+  }
+}
+
+.appListContainer {
+  padding: 0 16px;
+  width: calc(@item-width * 3 + 16px * 4);
+}
+
+.container {
+  max-height: 432px;
+  overflow-y: auto;
+}
+
+.appList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.appItem {
+  width: @item-width;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 6px;
+
+  &:hover {
+    background: var(--digio-brand-9);
+    cursor: pointer;
+  }
+}
+
+.appIcon {
+  width: auto;
+  height: 49px;
+}
+
+.appName {
+  font-weight: 600;
+  color: var(--digio-color-gray-900);
+  max-width: 100%;
+  text-align: center;
+  line-height: 15px;
+  font-size: 12px;
+}

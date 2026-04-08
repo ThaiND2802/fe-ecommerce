@@ -1,0 +1,95 @@
+@import '../../../styles/var.less';
+
+@border-radius: 6px;
+
+.header {
+  width: 100%;
+}
+
+.label {
+  flex: 1;
+  font-weight: 600;
+}
+
+.list {
+  border: 1px solid @color-gray-9;
+  padding: 0;
+  border-radius: @border-radius;
+
+  > div:not(:first-child) {
+    border-top: 1px solid @color-gray-9;
+  }
+
+  > div:first-child {
+    .item {
+      border-top-left-radius: @border-radius;
+      border-top-right-radius: @border-radius;
+    }
+  }
+
+  > div:last-child {
+    .item {
+      border-bottom-left-radius: @border-radius;
+      border-bottom-right-radius: @border-radius;
+    }
+  }
+}
+
+.item {
+  background: @color-white;
+  align-items: flex-start;
+
+  &:hover {
+    background: @color-gray-10b;
+  }
+
+  &.preview {
+    .handler {
+      display: none;
+    }
+  }
+}
+
+.handler {
+  margin: 10px 12px;
+}
+
+.avatar {
+  margin: 8px 12px;
+}
+
+.content {
+  flex: 1;
+  padding: 10px 12px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.members {
+  font-weight: 300;
+}
+
+.email {
+  font-weight: 300;
+}
+
+.userJob {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.expiredCount {
+  color: @color-red;
+  line-height: 18px;
+}
+
+.actions {
+  margin: 8px 12px;
+  visibility: hidden;
+
+  .item:hover & {
+    visibility: visible;
+  }
+}

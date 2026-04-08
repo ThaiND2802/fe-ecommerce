@@ -1,0 +1,36 @@
+@import '../../styles/var.less';
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.success {
+  background: @bg-green;
+  color: @color-green;
+}
+
+.error {
+  background: @bg-red;
+  color: @color-red;
+}
+
+.loading {
+  color: @color-primary;
+  :global(.oicon) {
+    animation: rotate 1.5s linear infinite;
+  }
+}

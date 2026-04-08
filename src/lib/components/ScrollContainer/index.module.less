@@ -1,0 +1,19 @@
+.scrollContainer {
+  &.light {
+    :global {
+      .simplebar-scrollbar::before {
+        background-color: #d9d9d9;
+      }
+    }
+  }
+
+  :global {
+    .simplebar-content {
+      padding: 0 var(--simplebar-padding) !important;
+    }
+
+    .simplebar-track.simplebar-vertical {
+      right: var(--simplebar-bar-offset) !important;
+    }
+  }
+}

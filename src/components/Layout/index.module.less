@@ -1,0 +1,16 @@
+@import 'src/style/var.less';
+
+.layoutResponsive {
+  :global {
+    .ant-layout-content {
+      @media (max-width: @mobile-breakpoint) {
+        :global {
+          .ant-layout-content {
+            height: 100%;
+            overflow-y: auto;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@color-white: var(--digio-color-white, #fff);
+@color-gray-8: var(--digio-color-gray-8, #e7e8eb);
+@page-padding: 16px;
+
+.page {
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+  background: @color-white;
+  border: 1px solid @color-gray-8;
+  border-top-left-radius: 20px;
+
+  &.topRightRounded {
+    border-top-right-radius: 20px;
+  }
+
+  &.responsive {
+    @media (max-width: 768px) {
+      border-radius: 0;
+    }
+  }
+
+  &.noBorderPrint {
+    @media print {
+      border: none;
+    }
+  }
+}
+
+.header {
+  border-top-left-radius: 12px;
+  border-bottom: 1px solid @color-gray-8;
+  padding: 10px @page-padding;
+  align-content: center;
+}
+
+.content {
+  padding: @page-padding;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+
+  .columnLayout & {
+    display: flex;
+    position: relative;
+  }
+}
+
+.noPadding {
+  .content {
+    padding: 0;
+  }
+}

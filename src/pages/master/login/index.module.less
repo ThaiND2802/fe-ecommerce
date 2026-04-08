@@ -1,0 +1,79 @@
+@import 'src/style/var.less';
+
+.loginForm {
+  :global {
+    .ant-form-item-label {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+
+      >label {
+        color: var(--gray-900, #101828) !important;
+
+        &:before {
+          order: 1;
+          margin-left: 6px;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .ant-btn {
+      font-weight: 600;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.forgotLink {
+  width: 100%;
+  text-align: right;
+}
+
+.centerV {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 16px;
+  margin-bottom: 32px;
+
+  h1 {
+    font-size: 30px;
+    color: var(--gray-900, #101828);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 38px;
+    font-family: 'ITC Avant Garde Gothic Medium', sans-serif;
+    margin-bottom: 8px;
+  }
+
+  article {
+    color: var(--gray-500, #667085);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.language {
+  >svg {
+    width: 30px;
+    height: 25px;
+    box-shadow: 5px 8px 24px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}

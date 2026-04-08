@@ -1,0 +1,89 @@
+@import '../../../styles/var.less';
+
+.description {
+  font-weight: 300;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  :global {
+    .ant-radio-inner {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.checkbox {
+  :global {
+    .ant-wave-target {
+      align-self: flex-start;
+      margin-top: 2px;
+    }
+  }
+}
+
+.fieldMappingHeader {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.fieldMappingHeaderLabel,
+.fieldName {
+  width: 300px;
+}
+
+.fieldMappingHeaderItem,
+.fieldSelector {
+  flex: 1;
+}
+
+.fieldNameLabel {
+  min-height: 32px;
+}
+
+.numberValue {
+  background: @color-gray-10;
+  border-radius: 6px;
+  padding: 0 5px;
+  font-weight: 600;
+
+  &:global(.tag-total) {
+    color: @color-gray-3;
+  }
+
+  &:global(.tag-valid) {
+    color: @color-green;
+  }
+
+  &:global(.tag-invalid) {
+    color: @color-red;
+  }
+}
+
+.required {
+  color: @color-red;
+  margin-left: 4px;
+}
+
+.table {
+  :global {
+    .ant-table-tbody {
+      tr.invalid-row {
+        color: @color-red;
+      }
+    }
+  }
+}
+
+.validRecord {
+  color: @color-green;
+}
+
+.listLabel {
+  font-weight: 700;
+}

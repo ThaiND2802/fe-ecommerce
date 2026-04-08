@@ -1,0 +1,75 @@
+@import '../../styles/var.less';
+
+:global {
+  .ant-drawer-content-wrapper {
+    border-top-left-radius: 24px;
+  }
+}
+
+.drawer {
+  border-top-left-radius: 24px;
+
+  :global {
+    .ant-drawer-header {
+      border-bottom-color: @color-gray-8;
+    }
+    .ant-drawer-body {
+      padding: 0;
+    }
+    .ant-drawer-title {
+      font-size: 18px;
+      color: var(--digio-color-gray-3);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+
+.closeButtonOuter {
+  align-items: center;
+  padding-left: 8px;
+}
+
+.closeButton {
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+  color: @color-gray-5;
+}
+
+.body {
+  height: 100%;
+  padding: 12px 0;
+  padding-right: 0;
+
+  .noPadding & {
+    padding: 0;
+  }
+
+  :global {
+    .simplebar-content-wrapper {
+      padding: 0 16px;
+    }
+  }
+}
+
+.actions {
+  :global {
+    .ant-divider {
+      height: 32px;
+    }
+  }
+}
+
+.scrollContainer {
+  :global {
+    .simplebar-content {
+      padding: var(--content-padding) !important;
+    }
+  }
+}

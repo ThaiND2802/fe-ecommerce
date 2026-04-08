@@ -1,0 +1,163 @@
+@import '../../styles/var.less';
+
+.approvalSteps {
+  row-gap: 20px;
+}
+
+.approvalStep {
+  column-gap: 10px;
+  position: relative;
+
+  &.line {
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      bottom: -20px;
+      left: 13px;
+      width: 1px;
+      background-color: @color-gray-7;
+    }
+    &.lastLine {
+      &:before {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.flex1 {
+  flex: 1;
+  min-width: 0;
+}
+
+.step {
+  width: 26px;
+  height: 26px;
+  border: 4px solid @color-white;
+  border-radius: 50%;
+  background-color: @color-gray-8;
+  color: @color-gray-6;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+
+  &.active {
+    background-color: @color-primary;
+    color: @color-white;
+  }
+
+  &.completed {
+    background-color: @color-white;
+    color: @color-brand-3;
+  }
+}
+
+.completedIcon {
+  width: 100%;
+  height: 100%;
+  border: 1px solid @color-brand-3;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  flex-shrink: 0;
+}
+
+.infoContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.userNameEmail {
+  margin-top: 2px;
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.separator {
+  padding: 0 5px;
+}
+
+.userRole,
+.userEmail,
+.delegation {
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.delegation {
+  color: @color-red;
+}
+
+.bypass {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.stepName {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  cursor: default;
+}
+
+.stepDuration {
+  margin-left: 30px;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.assignee {
+  position: relative;
+  & + & {
+    margin-top: 5px;
+    padding-top: 5px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 30px;
+      right: 0;
+      height: 1px;
+      background-color: @color-gray-8;
+    }
+  }
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 300;
+  color: @color-gray-5;
+  align-items: center;
+  gap: 10px;
+}
+
+.durationTag {
+  padding: 0 3px;
+  line-height: 16px;
+}
+
+.duration {
+  column-gap: 4px;
+  font-size: 12px;
+  font-weight: 300;
+  color: @color-gray-3;
+}

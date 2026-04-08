@@ -1,0 +1,94 @@
+@import '../../styles/var.less';
+
+.selectBox {
+  :global {
+    .ant-select-selection-overflow-item:not(:first-child) {
+      margin-left: -4px;
+    }
+  }
+
+  &:global(.ant-select-lg) {
+    :global {
+      .ant-select-selector {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+      }
+    }
+  }
+}
+
+.maxTag {
+  background: @color-gray-4;
+
+  :global {
+    .ant-avatar-string {
+      font-size: 10px;
+      font-weight: 400;
+    }
+  }
+}
+
+.info {
+  flex: 1;
+}
+
+.userAvatar {
+  flex-shrink: 0;
+}
+
+.groupName,
+.userName {
+  font-weight: 600;
+  color: @color-gray-3;
+  line-height: 20px;
+}
+
+.emailName {
+  column-gap: 4px;
+}
+
+.userEmail {
+  font-size: 12px;
+  font-weight: 300;
+  color: @color-gray-4;
+  line-height: 18px;
+}
+
+.userJob {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.memberCount {
+  font-weight: 300;
+  font-size: 12px;
+  color: @color-gray-4;
+}
+
+.checkIcon {
+  color: @color-primary;
+  font-size: 14px;
+}
+
+.expiredIcon {
+  color: @color-red;
+  margin-left: 5px;
+}
+
+.popup {
+  :global {
+    .ant-select-item-option {
+      padding: 8px 12px;
+
+      &.ant-select-item-option-selected {
+        background: none;
+      }
+
+      &:hover {
+        background: @color-gray-10;
+      }
+    }
+  }
+}

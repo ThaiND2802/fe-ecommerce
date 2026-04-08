@@ -1,0 +1,24 @@
+@import '../../styles/var.less';
+
+.appNotification {
+  max-width: 300px !important;
+  padding: 16px !important;
+
+  :global {
+    .ant-notification-notice-message {
+      padding-inline-end: 12px !important;
+    }
+  
+    .ant-notification-notice-close {
+      top: 6px !important;
+      right: 6px !important;
+    }
+  }
+}
+
+.notificationMessage {
+  font-size: 14px;
+  font-weight: 400;
+  color: @color-gray-3;
+  text-align: center;
+}

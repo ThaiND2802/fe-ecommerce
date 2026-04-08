@@ -1,0 +1,27 @@
+@import '../../styles/var.less';
+
+.component {
+  flex: 1;
+  border: 1px solid @color-gray-7;
+  border-radius: 8px;
+  padding: 6px 6px 6px 0;
+  transition: all 0.3s ease;
+
+  &.focus {
+    border-color: @color-primary;
+    box-shadow: 0 0 0 2px rgba(11, 136, 161, 0.16);
+  }
+
+  :global {
+    .ant-input {
+      box-shadow: none !important;
+      border: none !important;
+      transition: none;
+      max-height: 200px;
+
+      &.ant-input-disabled {
+        background: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  height: 100%;
+  .textBold {
+    color: #363a4a;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+  }
+  .wrapper {
+    .header {
+      margin-bottom: 100px;
+      &_bg {
+        background-image: url('src/assets/images/bg-profile.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 150px;
+        border-radius: 16px;
+        position: relative;
+        &_title {
+          position: absolute;
+          left: 20px;
+          top: 115px;
+          &_avatar {
+            padding: 5px;
+            border-radius: 70px;
+            background-color: #fff;
+          }
+          &_name {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            text-align: left;
+            color: #363a4a;
+          }
+          &_deparment {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: #8e96a3;
+          }
+        }
+      }
+    }
+    .content {
+      &_digital {
+        > article {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

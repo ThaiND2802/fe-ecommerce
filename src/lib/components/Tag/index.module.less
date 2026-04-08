@@ -1,0 +1,76 @@
+@import '../../styles/var.less';
+
+.component {
+  color: @color-gray-4;
+  background: @bg-gray-2;
+  border-color: @color-gray-4;
+  margin-inline-end: 0;
+  line-height: 20px;
+
+  &.noBorder {
+    border: none !important;
+  }
+
+  &.noBackground {
+    background: none !important;
+  }
+
+  &.flexCenter {
+    display: flex;
+    align-items: center;
+  }
+
+  &:global(.green) {
+    color: @color-green;
+    border-color: @color-green;
+    background: @bg-green;
+  }
+
+  &:global(.red) {
+    color: @color-red;
+    border-color: @color-red;
+    background: @bg-red;
+  }
+
+  &:global(.purple) {
+    color: @color-purple;
+    border-color: @color-purple;
+    background: @bg-purple;
+  }
+
+  &:global(.blue) {
+    color: @color-blue;
+    border-color: @color-blue;
+    background: @bg-blue;
+  }
+
+  &:global(.white) {
+    color: @color-gray-4;
+    border-color: @color-gray-4;
+    background: @color-white;
+  }
+
+  &:global(.yellow) {
+    color: @color-yellow;
+    border-color: @color-yellow;
+    background: @bg-yellow;
+  }
+
+  &:global(.orange) {
+    color: @color-orange;
+    border-color: @color-orange;
+    background: @bg-orange;
+  }
+
+  &:global(.pink) {
+    color: @color-other-pink;
+    border-color: @color-other-pink;
+    background: @bg-pink;
+  }
+
+  &:global(.light-gray) {
+    color: @color-gray-4;
+    border-color: @color-gray-4;
+    background: @bg-gray;
+  }
+}

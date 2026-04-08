@@ -1,0 +1,77 @@
+@import '../../styles/var.less';
+
+@indicator-size: 2px;
+@indicator-offset: var(--indicator-offset, 0px);
+
+.component {
+  visibility: visible;
+}
+
+.container {
+  flex-direction: column;
+  padding: calc((@indicator-size / 2)) 0;
+}
+
+.itemWrapper {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.item {
+  flex: 1;
+  &:global(.dragging) {
+    opacity: 40%;
+  }
+}
+
+.preview {
+  visibility: inherit;
+}
+
+.dropIndicator {
+  position: absolute;
+  z-index: 10;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border: @indicator-size solid @color-primary;
+    border-radius: 50%;
+    top: -2px;
+    left: -4px;
+  }
+
+  &:global(.horizontal) {
+    height: @indicator-size;
+  }
+
+  &:global(.vertical) {
+    height: 100%;
+    width: @indicator-size;
+  }
+
+  &:global(.top) {
+    top: calc(-@indicator-size / 2 - var(--gap, 0px) / 2);
+    left: @indicator-offset;
+    right: 0;
+  }
+
+  &:global(.bottom) {
+    bottom: calc(-@indicator-size / 2 - var(--gap, 0px) / 2);
+    left: @indicator-offset;
+    right: 0;
+  }
+}
+
+.dragPreview {
+  font-family: Inter, sans-serif;
+}
+
+.handler {
+  cursor: pointer;
+  display: inline-flex;
+}

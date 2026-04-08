@@ -1,0 +1,34 @@
+.container {
+  flex-direction: column;
+
+  &.inline {
+    flex-direction: row;
+    gap: 6px;
+
+    .label {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.label {
+  font-weight: 700;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.content {
+  width: 100%;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 20px;
+
+  :global {
+    .iconsax,
+    .oicon {
+      font-size: 22px;
+    }
+  }
+}

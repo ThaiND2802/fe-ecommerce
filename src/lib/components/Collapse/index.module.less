@@ -1,0 +1,19 @@
+@color-brand-9: var(--digio-brand-9, #e4f2f9);
+
+.collapse {
+  :global {
+    .ant-collapse-header {
+      border-radius: 6px !important;
+      height: 36px;
+      padding: 8px 6px !important;
+
+      &:hover {
+        background-color: @color-brand-9;
+      }
+    }
+
+    .ant-collapse-content-box {
+      padding: 0 !important;
+    }
+  }
+}

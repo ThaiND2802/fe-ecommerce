@@ -1,0 +1,33 @@
+export interface IContactDetail {
+  id: string
+  full_name: string
+  email: string
+  image: string
+  department_name: string
+  job: string
+  position: string
+  phone_number: string
+  is_hotline: boolean
+  is_private: boolean
+  starred: boolean
+  can_add_hotline: boolean
+  can_add_board: boolean
+  start_date: string
+  order: number
+  position_order: number
+  department_order: number
+  hotline_order: number
+  contact_order: number
+  ext: string
+  manager_id: string
+  manager_name: string
+  is_board_member: boolean
+  is_shared: boolean
+  department_id: string
+  position_id: string
+  job_title_id: string
+  gender: number
+  item_status: number
+  status_message: string
+  company: string
+}

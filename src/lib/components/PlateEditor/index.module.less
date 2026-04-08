@@ -1,0 +1,67 @@
+@import '../../styles/var.less';
+
+.editor {
+  border-radius: 6px;
+  border: 1px solid @color-gray-7;
+
+  &:global(.fullscreen-mode) {
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+
+    :local {
+      .editorWrapper {
+        flex: 1;
+        min-height: 0;
+      }
+    }
+  }
+
+  :global(.ant-form-item-has-error) & {
+    border-color: @color-red !important;
+  }
+
+  :global(.simplebar-content) {
+    height: 100%;
+  }
+}
+
+.editorView {
+  color: @color-gray-3;
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+.scrollContainer {
+  :global {
+    .simplebar-wrapper {
+      .simplebar-content-wrapper {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.modal {
+  top: 0;
+  max-width: 100vw;
+  padding: 0 !important;
+
+  >div {
+    height: 100%;
+  }
+
+  :global {
+
+    .ant-modal-content,
+    .ant-modal-body {
+      height: 100%;
+      padding: 0;
+    }
+  }
+}

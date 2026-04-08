@@ -1,0 +1,56 @@
+.container {
+  min-width: 360px;
+}
+
+.header {
+  padding: 0 16px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--digio-color-black);
+  flex: 1;
+}
+
+.checkAll {
+  color: var(--digio-color-gray-4);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--digio-brand-primary);
+  }
+}
+
+.tabs {
+  :global {
+    .ant-tabs-nav {
+      margin: 0 16px 10px;
+
+      &::before {
+        color: var(--digio-color-gray-8);
+      }
+    }
+
+    .ant-tabs-tab {
+      padding: 0 !important;
+
+      & + .ant-tabs-tab {
+        margin-left: 24px;
+      }
+    }
+
+    .ant-tabs-tab-active {
+      .ant-tabs-tab-btn {
+        color: var(--digio-color-gray-3) !important;
+      }
+    }
+
+    .ant-tabs-tab-btn {
+      color: var(--digio-color-gray-5);
+      font-weight: 600;
+      line-height: 20px;
+      padding: 3px 0;
+    }
+  }
+}

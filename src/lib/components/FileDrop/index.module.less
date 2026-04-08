@@ -1,0 +1,47 @@
+@color-gray-3: var(--digio-color-gray-3, #363a4a);
+@color-gray-5: var(--digio-color-gray-5, #8e96a3);
+@color-red: var(--digio-color-red, #e14851);
+
+.container {
+  :global {
+    .ant-upload-btn {
+      padding: 18px 16px !important;
+    }
+    .ant-upload-drag-container {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    .ant-upload-list {
+      display: none !important;
+    }
+  }
+
+  :global(.ant-form-item-has-error) & {
+    :global {
+      .ant-upload-drag {
+        border-color: @color-red;
+      }
+    }
+  }
+}
+
+.dragAndDrop {
+  margin-bottom: 8px;
+  color: @color-gray-5;
+  font-weight: 300;
+}
+
+.browse {
+  padding: 0 0 0 4px !important;
+  text-decoration: underline;
+  color: var(--digio-brand-primary) !important;
+  height: initial;
+}
+
+.hint {
+  font-size: 12px;
+  font-weight: 300;
+  color: @color-gray-5;
+}

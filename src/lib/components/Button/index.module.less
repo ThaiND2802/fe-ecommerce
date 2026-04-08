@@ -1,0 +1,17 @@
+@import '../../styles/var.less';
+
+.button {
+  &.selected {
+    background-color: @color-brand-9;
+    color: @color-brand-3;
+    border-color: @color-brand-6;
+  }
+
+  &.bold {
+    font-weight: 600;
+
+    &:not(:global(.ant-btn-primary)) {
+      color: @color-gray-4;
+    }
+  }
+}

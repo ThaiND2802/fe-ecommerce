@@ -1,0 +1,56 @@
+@import '../../styles/var.less';
+
+.popoverBody {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+
+  :global {
+    .ant-popover-inner-content {
+      flex: 1;
+      min-height: 0;
+    }
+  }
+}
+
+.content {
+  max-height: 370px;
+  overflow-y: auto;
+}
+
+.listLabel {
+  font-weight: 700;
+  font-size: 15px;
+  flex: 1;
+}
+
+.listHeader {
+  background: @color-white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-bottom: 10px;
+}
+
+.fieldItem {
+  justify-content: center;
+}
+
+.fieldInput {
+  margin-top: 4px;
+  padding-left: 24px;
+}
+
+.hiddenFieldsCollapse {
+  :global {
+    .ant-collapse-header {
+      margin-top: 20px;
+      padding: 0 !important;
+      font-weight: 700;
+    }
+    .ant-collapse-content-box {
+      margin-top: 10px;
+      padding: 0 !important;
+    }
+  }
+}

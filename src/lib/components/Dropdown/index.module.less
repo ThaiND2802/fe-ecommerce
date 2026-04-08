@@ -1,0 +1,30 @@
+@color-gray-4: var(--digio-color-gray-4, #5d6573);
+@color-gray-7: var(--digio-color-gray-7, #DBDCE2);
+
+.overlay {
+  :global {
+    .ant-dropdown-menu {
+      padding: 8px;
+    }
+    .ant-dropdown-menu-item-group-title {
+      font-size: 12px;
+      font-weight: 300;
+      color: @color-gray-4 !important;
+      padding: 8px 0 !important;
+      line-height: 18px;
+    }
+
+    .ant-dropdown-menu-item-group-list {
+      margin: 0 !important;
+
+      .ant-dropdown-menu-item {
+        padding: 8px 12px !important;
+        line-height: 20px;
+      }
+    }
+
+    .ant-dropdown-menu-item-divider {
+      background: @color-gray-7 !important;
+    }
+  }
+}

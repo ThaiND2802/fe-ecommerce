@@ -1,0 +1,52 @@
+@import '../../styles/var.less';
+
+.icon {
+  padding: 2px;
+  height: initial;
+  transition: color 0.2s, background 0.2s;
+
+  &:hover {
+    background: @color-gray-10 !important;
+
+    :global {
+      .iconsax,
+      .oicon {
+        color: @color-primary;
+      }
+    }
+  }
+
+  &.red:hover {
+    :global {
+      .iconsax,
+      .oicon {
+        color: @color-red;
+      }
+    }
+  }
+
+  &.noBackground:hover {
+    background: none !important;
+  }
+
+  &.noPadding {
+    padding: 0 !important;
+    border: 0;
+    height: auto;
+  }
+
+  &.disabled:hover {
+    background: none !important;
+
+    :global {
+      .iconsax,
+      .oicon {
+        color: inherit !important;
+      }
+    }
+  }
+}
+
+.moreIcon {
+  background: none !important;
+}

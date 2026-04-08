@@ -1,0 +1,77 @@
+@import 'src/style/var.less';
+
+.card {
+  background: @color-gray-10;
+  border-radius: 8px;
+  padding: 4px;
+  width: 160px;
+  align-items: center;
+  column-gap: 5px;
+  cursor: default;
+  position: relative;
+
+  &.error {
+    .fileName,
+    .fileExtension,
+    .fileSize {
+      color: @color-red;
+    }
+  }
+
+  &.clickable {
+    cursor: pointer;
+
+    &:hover {
+      background: @color-gray-9;
+    }
+  }
+}
+
+.fileIcon {
+  max-width: 28px;
+  max-height: 34px;
+  flex-shrink: 0;
+  transform: scale(0.8);
+}
+
+.fileInfo {
+  flex: 1;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.fileName,
+.fileExtension,
+.fileSize {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.fileSize {
+  color: @color-gray-6;
+  font-size: 10px;
+}
+
+.overlay {
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #666666B2;
+  color: @color-white;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+}
+
+.icon {
+  color: @color-white;
+  font-size: 18px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
