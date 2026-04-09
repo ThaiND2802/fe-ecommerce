@@ -56,4 +56,317 @@ export default {
       required: 'This field is required',
     },
   },
+  order: {
+    title: {
+      page: 'Order',
+      create: 'Create Order',
+      edit: 'Edit Order',
+    },
+    search: {
+      placeholder: 'Search Order',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        order_code: 'Order Code',
+        customer_id: 'Customer ID',
+        order_date: 'Order Date',
+        due_date: 'Due Date',
+        order_type: 'Order Type',
+        delivery_address: 'Delivery Address',
+        vat_rate: 'VAT Rate',
+        vat_amount: 'VAT Amount',
+        total_amount: 'Total Amount',
+        total_amount_with_vat: 'Total Amount With VAT',
+        amount_paid: 'Amount Paid',
+        debt_amount: 'Debt Amount',
+        payment_method: 'Payment Method',
+        status: 'Status',
+        note: 'Note',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      order_code: 'Order Code',
+      customer_id: 'Customer ID',
+      order_date: 'Order Date',
+      due_date: 'Due Date',
+      order_type: 'Order Type',
+      delivery_address: 'Delivery Address',
+      vat_rate: 'VAT Rate',
+      vat_amount: 'VAT Amount',
+      total_amount: 'Total Amount',
+      total_amount_with_vat: 'Total Amount With VAT',
+      amount_paid: 'Amount Paid',
+      debt_amount: 'Debt Amount',
+      payment_method: 'Payment Method',
+      status: 'Status',
+      note: 'Note',
+    },
+    order_type: {
+      retail: 'Retail',
+      wholesale: 'Wholesale',
+      online: 'Online',
+    },
+    status: {
+      draft: 'Draft',
+      confirmed: 'Confirmed',
+      waiting_delivery: 'Waiting Delivery',
+      delivering: 'Delivering',
+      completed: 'Completed',
+      delivery_failed: 'Delivery Failed',
+      cancelled: 'Cancelled',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
+  category: {
+    title: {
+      page: 'Category',
+      create: 'Create Category',
+      edit: 'Edit Category',
+    },
+    search: {
+      placeholder: 'Search Category',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        name: 'Name',
+        description: 'Description',
+        status: 'Status',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      name: 'Name',
+      description: 'Description',
+      status: 'Status',
+    },
+    status: {
+      inactive: 'Inactive',
+      active: 'Active',
+      deleted: 'Deleted',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
+  product: {
+    title: {
+      page: 'Product',
+      create: 'Create Product',
+      edit: 'Edit Product',
+    },
+    search: {
+      placeholder: 'Search Product',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        code: 'Code',
+        name: 'Name',
+        description: 'Description',
+        unit: 'Unit',
+        price: 'Price',
+        cost_price: 'Cost Price',
+        image_url: 'Image URL',
+        category_id: 'Category',
+        is_active: 'Active Status',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      code: 'Code',
+      name: 'Name',
+      description: 'Description',
+      unit: 'Unit',
+      price: 'Price',
+      cost_price: 'Cost Price',
+      image_url: 'Image URL',
+      category_id: 'Category',
+      is_active: 'Active Status',
+    },
+    boolean: {
+      active: 'Active',
+      inactive: 'Inactive',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
+  inventory: {
+    title: {
+      page: 'Inventory',
+      create: 'Create Inventory',
+      edit: 'Edit Inventory',
+    },
+    search: {
+      placeholder: 'Search Inventory',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        product_id: 'Product',
+        quantity: 'Quantity',
+        reserved_quantity: 'Reserved Quantity',
+        available_quantity: 'Available Quantity',
+        reorder_level: 'Reorder Level',
+        last_updated: 'Last Updated',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      product_id: 'Product',
+      quantity: 'Quantity',
+      reserved_quantity: 'Reserved Quantity',
+      available_quantity: 'Available Quantity',
+      reorder_level: 'Reorder Level',
+      last_updated: 'Last Updated',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
+  inventoryLog: {
+    title: {
+      page: 'Inventory Log',
+      create: 'Create Inventory Log',
+      edit: 'Edit Inventory Log',
+    },
+    search: {
+      placeholder: 'Search Inventory Log',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        inventory_id: 'Inventory',
+        movement_type: 'Movement Type',
+        quantity: 'Quantity',
+        balance: 'Balance',
+        reference_id: 'Reference ID',
+        reference_type: 'Reference Type',
+        notes: 'Notes',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      inventory_id: 'Inventory',
+      movement_type: 'Movement Type',
+      quantity: 'Quantity',
+      balance: 'Balance',
+      reference_id: 'Reference ID',
+      reference_type: 'Reference Type',
+      notes: 'Notes',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
+  codeGenerator: {
+    title: {
+      page: 'Code Generator',
+      create: 'Create Code Generator',
+      edit: 'Edit Code Generator',
+    },
+    search: {
+      placeholder: 'Search Code Generator',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        prefix: 'Prefix',
+        last_number: 'Last Number',
+        created_at: 'Created At',
+        updated_at: 'Updated At',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      prefix: 'Prefix',
+      last_number: 'Last Number',
+      created_at: 'Created At',
+      updated_at: 'Updated At',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
 }

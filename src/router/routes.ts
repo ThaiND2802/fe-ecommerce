@@ -22,6 +22,12 @@ export const PATH_TREE = {
   MANAGEMENT: {
     ROOT: 'management',
     CUSTOMER: 'customer',
+    ORDER: 'order',
+    CATEGORY: 'category',
+    PRODUCT: 'product',
+    INVENTORY: 'inventory',
+    INVENTORY_LOG: 'inventory-log',
+    CODE_GENERATOR: 'code-generator',
   },
   SETTING: {
     ROOT: 'setting',
@@ -70,6 +76,36 @@ export const ROUTE_TREE: RouteNode[] = [
         path: PATH_TREE.MANAGEMENT.CUSTOMER,
         labelKey: 'menu.customer',
         Element: lazy(() => import('src/pages/management/customer')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.ORDER,
+        labelKey: 'menu.order',
+        Element: lazy(() => import('src/pages/management/order')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.CATEGORY,
+        labelKey: 'menu.category',
+        Element: lazy(() => import('src/pages/management/category')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.PRODUCT,
+        labelKey: 'menu.product',
+        Element: lazy(() => import('src/pages/management/product')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.INVENTORY,
+        labelKey: 'menu.inventory',
+        Element: lazy(() => import('src/pages/management/inventory')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.INVENTORY_LOG,
+        labelKey: 'menu.inventoryLog',
+        Element: lazy(() => import('src/pages/management/inventory-log')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.CODE_GENERATOR,
+        labelKey: 'menu.codeGenerator',
+        Element: lazy(() => import('src/pages/management/code-generator')),
       },
     ],
   },

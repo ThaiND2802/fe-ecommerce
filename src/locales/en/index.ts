@@ -125,6 +125,12 @@ const en = {
 
       management: 'Management',
       customer: 'Customer',
+      order: 'Order',
+      category: 'Category',
+      product: 'Product',
+      inventory: 'Inventory',
+      inventoryLog: 'Inventory Log',
+      codeGenerator: 'Code Generator',
       setting: 'Setting',
       generalSetting: 'General Setting',
     },

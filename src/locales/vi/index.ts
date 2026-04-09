@@ -126,6 +126,12 @@ const vi = {
 
       management: 'Quản lý',
       customer: 'Khách hàng',
+      order: 'Đơn hàng',
+      category: 'Danh mục',
+      product: 'Sản phẩm',
+      inventory: 'Tồn kho',
+      inventoryLog: 'Nhật ký tồn kho',
+      codeGenerator: 'Bộ sinh mã',
       setting: 'Cấu hình',
       generalSetting: 'Cấu hình chung',
     },
