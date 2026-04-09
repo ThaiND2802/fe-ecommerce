@@ -1,5 +1,6 @@
 import setting from './setting'
 import importModule from './import'
+import management from './management'
 
 const en = {
   translation: {
@@ -122,12 +123,15 @@ const en = {
     menu: {
       home: 'Home',
 
+      management: 'Management',
+      customer: 'Customer',
       setting: 'Setting',
       generalSetting: 'General Setting',
     },
 
     ...setting,
     ...importModule,
+    ...management,
   },
 }
 

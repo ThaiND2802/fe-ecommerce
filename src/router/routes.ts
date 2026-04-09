@@ -19,6 +19,10 @@ export const PATH_TREE = {
   LOGOUT: '/logout',
   LOGOUT_CHANNEL: '/logout-channel',
   HOME: '/',
+  MANAGEMENT: {
+    ROOT: 'management',
+    CUSTOMER: 'customer',
+  },
   SETTING: {
     ROOT: 'setting',
     GENERAL_SETTING: 'general',
@@ -56,6 +60,18 @@ export const ROUTE_TREE: RouteNode[] = [
     labelKey: 'menu.home',
     icon: 'sax:home-2',
     Element: lazy(() => import('src/pages/home')),
+  },
+  {
+    path: PATH_TREE.MANAGEMENT.ROOT,
+    labelKey: 'menu.management',
+    icon: 'sax:setting-1',
+    children: [
+      {
+        path: PATH_TREE.MANAGEMENT.CUSTOMER,
+        labelKey: 'menu.customer',
+        Element: lazy(() => import('src/pages/management/customer')),
+      },
+    ],
   },
   {
     path: PATH_TREE.SETTING.ROOT,

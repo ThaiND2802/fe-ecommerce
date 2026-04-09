@@ -59,6 +59,8 @@ mock_data/
 .claude/
 .agents/
 .qwen/
+
 openspec/
 config.yaml
 skills-lock.json
+package-lock.json

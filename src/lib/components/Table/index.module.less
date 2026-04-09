@@ -8,6 +8,7 @@
   border-radius: 0 !important;
 
   :global {
+
     table,
     .ant-table {
       border-radius: 0 !important;
@@ -22,17 +23,21 @@
         }
       }
     }
+
     .ant-form-item-has-error {
       margin-bottom: 16px;
     }
+
     .tooltip-error {
       .ant-form-item-additional {
         display: none !important;
       }
+
       .ant-form-item-has-error {
         margin-bottom: 0;
       }
     }
+
     .ant-form-item {
       margin-bottom: 0;
     }
@@ -55,7 +60,7 @@
 
     .ant-table-thead {
       .ant-table-cell {
-        background: @color-table-title;
+        background: @color-table-title !important;
 
         &::before {
           background-color: @color-gray-7 !important;
@@ -67,9 +72,11 @@
       .ant-table-cell {
         background: @color-brand-9 !important;
       }
+
       :local(.rowActions) {
         background: @color-brand-9;
       }
+
       &:hover {
         :local(.rowActions) {
           background: @color-brand-9;
@@ -115,12 +122,13 @@
     .ant-spin-nested-loading {
       height: 100%;
     }
+
     .ant-spin-container {
       display: flex;
       flex-direction: column;
       height: 100%;
 
-      > .ant-table {
+      >.ant-table {
         flex: 1;
 
         .ant-table-container,
@@ -138,6 +146,7 @@
       overflow: auto !important;
       max-height: none !important;
     }
+
     .ant-table-container {
       display: flex;
       flex-direction: column;
@@ -148,7 +157,7 @@
 .tableAdaptiveHeight {
   :global {
     .ant-spin-container {
-      > .ant-table {
+      >.ant-table {
         min-height: 0;
         flex: initial !important;
       }
@@ -166,14 +175,17 @@
         overflow: hidden;
       }
     }
+
     .ant-table-cell {
       border-bottom: 1px solid @color-gray-9 !important;
     }
+
     .ant-table-row.last-row {
       td {
         border-bottom: none !important;
       }
     }
+
     .ant-pagination {
       border: 1px solid @color-gray-9;
       border-top: none;
@@ -185,8 +197,9 @@
 
     .ant-table-empty {
       border-radius: 6px !important;
+
       .ant-table-container {
-        border-radius: 6px !important;
+        border-radius: 8px !important;
       }
     }
   }
@@ -199,7 +212,7 @@
     }
   }
 
-  
+
 }
 
 .tableAutoHideSelectionBox {
@@ -230,7 +243,7 @@
 .tableHasActionMenu {
   :global {
     .ant-table-thead {
-      tr > :nth-last-child(2) {
+      tr> :nth-last-child(2) {
         &::before {
           display: none;
         }

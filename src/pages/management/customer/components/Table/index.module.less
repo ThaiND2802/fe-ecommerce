@@ -1,0 +1,21 @@
+@import 'src/style/var.less';
+
+.container {
+  height: 100%;
+}
+
+.tableWrapper {
+  flex: 1;
+  min-height: 0;
+  height: auto;
+
+  :global {
+    .ant-table-row {
+      cursor: pointer;
+
+      &:local(.late) {
+        background-color: @bg-red;
+      }
+    }
+  }
+}

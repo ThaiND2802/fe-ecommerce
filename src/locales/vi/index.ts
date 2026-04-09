@@ -1,5 +1,6 @@
 import setting from './setting'
 import importModule from './import'
+import management from './management'
 
 const vi = {
   translation: {
@@ -123,12 +124,15 @@ const vi = {
     menu: {
       home: 'Home',
 
+      management: 'Quản lý',
+      customer: 'Khách hàng',
       setting: 'Cấu hình',
       generalSetting: 'Cấu hình chung',
     },
 
     ...setting,
     ...importModule,
+    ...management,
   },
 }
 
