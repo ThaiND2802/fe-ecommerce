@@ -57,6 +57,70 @@ export default {
     },
   }
   ,
+  user: {
+    title: {
+      page: 'Người dùng',
+      create: 'Thêm người dùng',
+      edit: 'Sửa người dùng',
+    },
+    search: {
+      placeholder: 'Tìm kiếm người dùng',
+    },
+    button: {
+      edit: 'Sửa',
+      delete: 'Xóa',
+      save: 'Lưu',
+    },
+    text: {
+      input: 'Nhập',
+    },
+    table: {
+      columns: {
+        no: 'STT',
+        id: 'Mã',
+        full_name: 'Họ tên',
+        email: 'Email',
+        phone: 'Số điện thoại',
+        image: 'Ảnh',
+        gender: 'Giới tính',
+        date_of_birth: 'Ngày sinh',
+        address: 'Địa chỉ',
+        department_id: 'Phòng ban',
+        position_id: 'Vị trí',
+        job_title_id: 'Chức danh',
+        avatar_url: 'URL avatar',
+        hire_date: 'Ngày vào làm',
+        refresh_token: 'Refresh token',
+        refresh_token_expiry_time: 'Hạn refresh token',
+        is_active: 'Trạng thái',
+      },
+      actions: {
+        edit: 'Sửa',
+        delete: 'Xóa',
+      },
+    },
+    form: {
+      id: 'Mã',
+      full_name: 'Họ tên',
+      email: 'Email',
+      phone: 'Số điện thoại',
+      image: 'Ảnh',
+      gender: 'Giới tính',
+      date_of_birth: 'Ngày sinh',
+      address: 'Địa chỉ',
+      department_id: 'Phòng ban',
+      position_id: 'Vị trí',
+      job_title_id: 'Chức danh',
+      avatar_url: 'URL avatar',
+      hire_date: 'Ngày vào làm',
+      refresh_token: 'Refresh token',
+      refresh_token_expiry_time: 'Hạn refresh token',
+      is_active: 'Trạng thái',
+    },
+    validation: {
+      required: 'Thông tin này không được để trống',
+    },
+  },
   order: {
     title: {
       page: 'Đơn hàng',
@@ -234,6 +298,44 @@ export default {
       required: 'Thông tin này không được để trống',
     },
   },
+  tenant: {
+    title: {
+      page: 'Tenant',
+      create: 'Thêm tenant',
+      edit: 'Sửa tenant',
+    },
+    search: {
+      placeholder: 'Tìm kiếm tenant',
+    },
+    button: {
+      edit: 'Sửa',
+      delete: 'Xóa',
+      save: 'Lưu',
+    },
+    text: {
+      input: 'Nhập',
+    },
+    table: {
+      columns: {
+        no: 'STT',
+        id: 'Mã',
+        name: 'Tên',
+        schema: 'Schema',
+      },
+      actions: {
+        edit: 'Sửa',
+        delete: 'Xóa',
+      },
+    },
+    form: {
+      id: 'Mã',
+      name: 'Tên',
+      schema: 'Schema',
+    },
+    validation: {
+      required: 'Thông tin này không được để trống',
+    },
+  },
   inventory: {
     title: {
       page: 'Tồn kho',
@@ -275,6 +377,62 @@ export default {
       available_quantity: 'Số lượng khả dụng',
       reorder_level: 'Ngưỡng nhập lại',
       last_updated: 'Cập nhật lần cuối',
+    },
+    validation: {
+      required: 'Thông tin này không được để trống',
+    },
+  },
+  orderItem: {
+    title: {
+      page: 'Chi tiết đơn hàng',
+      create: 'Thêm chi tiết đơn hàng',
+      edit: 'Sửa chi tiết đơn hàng',
+    },
+    search: {
+      placeholder: 'Tìm kiếm chi tiết đơn hàng',
+    },
+    button: {
+      edit: 'Sửa',
+      delete: 'Xóa',
+      save: 'Lưu',
+    },
+    text: {
+      input: 'Nhập',
+    },
+    table: {
+      columns: {
+        no: 'STT',
+        id: 'Mã',
+        order_id: 'Đơn hàng',
+        product_id: 'Sản phẩm',
+        coefficient_0: 'Hệ số 0',
+        coefficient_1: 'Hệ số 1',
+        coefficient_2: 'Hệ số 2',
+        coefficient_3: 'Hệ số 3',
+        coefficient_4: 'Hệ số 4',
+        coefficient_5: 'Hệ số 5',
+        quantity: 'Số lượng',
+        unit_price: 'Đơn giá',
+        total: 'Thành tiền',
+      },
+      actions: {
+        edit: 'Sửa',
+        delete: 'Xóa',
+      },
+    },
+    form: {
+      id: 'Mã',
+      order_id: 'Đơn hàng',
+      product_id: 'Sản phẩm',
+      coefficient_0: 'Hệ số 0',
+      coefficient_1: 'Hệ số 1',
+      coefficient_2: 'Hệ số 2',
+      coefficient_3: 'Hệ số 3',
+      coefficient_4: 'Hệ số 4',
+      coefficient_5: 'Hệ số 5',
+      quantity: 'Số lượng',
+      unit_price: 'Đơn giá',
+      total: 'Thành tiền',
     },
     validation: {
       required: 'Thông tin này không được để trống',

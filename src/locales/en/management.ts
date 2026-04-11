@@ -56,6 +56,70 @@ export default {
       required: 'This field is required',
     },
   },
+  user: {
+    title: {
+      page: 'User',
+      create: 'Create User',
+      edit: 'Edit User',
+    },
+    search: {
+      placeholder: 'Search User',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        full_name: 'Full Name',
+        email: 'Email',
+        phone: 'Phone',
+        image: 'Image',
+        gender: 'Gender',
+        date_of_birth: 'Date Of Birth',
+        address: 'Address',
+        department_id: 'Department',
+        position_id: 'Position',
+        job_title_id: 'Job Title',
+        avatar_url: 'Avatar URL',
+        hire_date: 'Hire Date',
+        refresh_token: 'Refresh Token',
+        refresh_token_expiry_time: 'Refresh Token Expiry Time',
+        is_active: 'Active Status',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      full_name: 'Full Name',
+      email: 'Email',
+      phone: 'Phone',
+      image: 'Image',
+      gender: 'Gender',
+      date_of_birth: 'Date Of Birth',
+      address: 'Address',
+      department_id: 'Department',
+      position_id: 'Position',
+      job_title_id: 'Job Title',
+      avatar_url: 'Avatar URL',
+      hire_date: 'Hire Date',
+      refresh_token: 'Refresh Token',
+      refresh_token_expiry_time: 'Refresh Token Expiry Time',
+      is_active: 'Active Status',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
   order: {
     title: {
       page: 'Order',
@@ -233,6 +297,44 @@ export default {
       required: 'This field is required',
     },
   },
+  tenant: {
+    title: {
+      page: 'Tenant',
+      create: 'Create Tenant',
+      edit: 'Edit Tenant',
+    },
+    search: {
+      placeholder: 'Search Tenant',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        name: 'Name',
+        schema: 'Schema',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      name: 'Name',
+      schema: 'Schema',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
   inventory: {
     title: {
       page: 'Inventory',
@@ -274,6 +376,62 @@ export default {
       available_quantity: 'Available Quantity',
       reorder_level: 'Reorder Level',
       last_updated: 'Last Updated',
+    },
+    validation: {
+      required: 'This field is required',
+    },
+  },
+  orderItem: {
+    title: {
+      page: 'Order Item',
+      create: 'Create Order Item',
+      edit: 'Edit Order Item',
+    },
+    search: {
+      placeholder: 'Search Order Item',
+    },
+    button: {
+      edit: 'Edit',
+      delete: 'Delete',
+      save: 'Save',
+    },
+    text: {
+      input: 'Input',
+    },
+    table: {
+      columns: {
+        no: 'No.',
+        id: 'ID',
+        order_id: 'Order',
+        product_id: 'Product',
+        coefficient_0: 'Coefficient 0',
+        coefficient_1: 'Coefficient 1',
+        coefficient_2: 'Coefficient 2',
+        coefficient_3: 'Coefficient 3',
+        coefficient_4: 'Coefficient 4',
+        coefficient_5: 'Coefficient 5',
+        quantity: 'Quantity',
+        unit_price: 'Unit Price',
+        total: 'Total',
+      },
+      actions: {
+        edit: 'Edit',
+        delete: 'Delete',
+      },
+    },
+    form: {
+      id: 'ID',
+      order_id: 'Order',
+      product_id: 'Product',
+      coefficient_0: 'Coefficient 0',
+      coefficient_1: 'Coefficient 1',
+      coefficient_2: 'Coefficient 2',
+      coefficient_3: 'Coefficient 3',
+      coefficient_4: 'Coefficient 4',
+      coefficient_5: 'Coefficient 5',
+      quantity: 'Quantity',
+      unit_price: 'Unit Price',
+      total: 'Total',
     },
     validation: {
       required: 'This field is required',

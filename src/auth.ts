@@ -2,7 +2,7 @@ import axios from 'axios'
 import { deleteToken } from 'firebase/messaging'
 
 import { ENDPOINT } from 'src/constants/api'
-import { USER_ACCESS_TOKEN, USER_DEVICE_ID, USER_KEY, USER_LANGUAGE, USER_REFRESH_TOKEN } from 'src/constants/app'
+import { USER_ACCESS_TOKEN, USER_KEY, USER_LANGUAGE, USER_REFRESH_TOKEN } from 'src/constants/app'
 import { APP_GATEWAY, TENANT_HOST_PATTERN, VITE_APP_BACKEND_IDENTITY, VITE_APP_TENANT_ID } from 'src/environments/environment'
 import { messaging } from 'src/firebase'
 import { queryClient } from 'src/query'
@@ -12,20 +12,19 @@ import { getEncryptedItem, removeEncryptedItem, setEncryptedItem } from 'src/uti
 export interface AuthSession {
   accessToken: string
   refreshToken: string
-  deviceId: string
 }
 
 export interface AuthState {
   isBootstrapping: boolean
   accessToken: string | null
   refreshToken: string | null
-  deviceId: string | null
 }
 
 interface RefreshSessionResponse {
-  accessToken: string
-  refreshToken: string
-  deviceId: string
+  Token?: string
+  RefreshToken?: string
+  ExpiresAtUtc?: string
+  ExpiresInSeconds?: number
 }
 
 interface RefreshResponse<T> {
@@ -41,7 +40,6 @@ let authState: AuthState = {
   isBootstrapping: true,
   accessToken: null,
   refreshToken: null,
-  deviceId: null,
 }
 
 let refreshPromise: Promise<AuthSession> | null = null
@@ -53,7 +51,6 @@ const emitChange = () => {
 const getStoredSession = (): Omit<AuthState, 'isBootstrapping'> => ({
   accessToken: getEncryptedItem(USER_ACCESS_TOKEN),
   refreshToken: getEncryptedItem(USER_REFRESH_TOKEN),
-  deviceId: getEncryptedItem(USER_DEVICE_ID),
 })
 
 const setAuthState = (nextState: AuthState) => {
@@ -95,20 +92,17 @@ export const bootstrapSession = () => {
 export const setSession = (session: AuthSession) => {
   setEncryptedItem(USER_ACCESS_TOKEN, session.accessToken)
   setEncryptedItem(USER_REFRESH_TOKEN, session.refreshToken)
-  setEncryptedItem(USER_DEVICE_ID, session.deviceId)
 
   setAuthState({
     isBootstrapping: false,
     accessToken: session.accessToken,
     refreshToken: session.refreshToken,
-    deviceId: session.deviceId,
   })
 }
 
 export const clearSession = async () => {
   removeEncryptedItem(USER_ACCESS_TOKEN)
   removeEncryptedItem(USER_REFRESH_TOKEN)
-  removeEncryptedItem(USER_DEVICE_ID)
   removeEncryptedItem(USER_KEY)
 
   sessionStorage.clear()
@@ -128,7 +122,6 @@ export const clearSession = async () => {
     isBootstrapping: false,
     accessToken: null,
     refreshToken: null,
-    deviceId: null,
   })
 }
 
@@ -151,11 +144,9 @@ export const refreshSession = async () => {
     return refreshPromise
   }
 
-  const { refreshToken, deviceId } = authState.refreshToken
-    ? authState
-    : { ...authState, ...getStoredSession() }
+  const { refreshToken } = authState.refreshToken ? authState : { ...authState, ...getStoredSession() }
 
-  if (!refreshToken || !deviceId) {
+  if (!refreshToken) {
     await clearSession()
     throw new Error('Missing refresh session')
   }
@@ -165,7 +156,6 @@ export const refreshSession = async () => {
       `${VITE_APP_BACKEND_IDENTITY}${ENDPOINT.REFRESH_TOKEN}`,
       {
         refreshToken,
-        deviceId,
       },
       {
         baseURL: APP_GATEWAY,
@@ -177,13 +167,20 @@ export const refreshSession = async () => {
     )
     .then(({ data }) => {
       const statusCode = data.statusCode ?? data.status_code
+      const accessToken = data.data?.Token
+      const refreshToken = data.data?.RefreshToken
 
-      if (statusCode !== 200 || !data.data?.accessToken || !data.data?.refreshToken) {
+      if (statusCode !== 200 || !accessToken || !refreshToken) {
         throw new Error('Refresh session failed')
       }
 
-      setSession(data.data)
-      return data.data
+      const session = {
+        accessToken,
+        refreshToken,
+      }
+
+      setSession(session)
+      return session
     })
     .catch(async (error) => {
       await clearSession()

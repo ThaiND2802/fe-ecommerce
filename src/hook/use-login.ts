@@ -8,13 +8,10 @@ import { setEncryptedItem } from 'src/utils/storage'
 import i18n from 'src/locales/i18n'
 
 interface ILoginResponse {
-  accessToken: string
-  refreshToken: string
-  deviceId: string
-  defaultTenant: string
-  expiresIn: number
-  scope: string
-  tokenType: string
+  Token: string
+  RefreshToken: string
+  ExpiresAtUtc: string
+  ExpiresInSeconds: number
 }
 
 export const useLogin = ({
@@ -33,11 +30,13 @@ export const useLogin = ({
       })
     },
     onSuccess: (response: ApiResponse<ILoginResponse>) => {
-      if (response.statusCode === HTTP_STATUS_RESPONSE_KEY.SUCCESS) {
+      const accessToken = response.data?.Token
+      const refreshToken = response.data?.RefreshToken
+
+      if (response.statusCode === HTTP_STATUS_RESPONSE_KEY.SUCCESS && accessToken && refreshToken) {
         setSession({
-          accessToken: response.data.accessToken,
-          refreshToken: response.data.refreshToken,
-          deviceId: response.data.deviceId,
+          accessToken,
+          refreshToken,
         })
         setEncryptedItem('lang', i18n.language)
 

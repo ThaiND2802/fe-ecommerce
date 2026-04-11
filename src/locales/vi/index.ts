@@ -126,7 +126,10 @@ const vi = {
 
       management: 'Quản lý',
       customer: 'Khách hàng',
+      user: 'Người dùng',
+      tenant: 'Tenant',
       order: 'Đơn hàng',
+      orderItem: 'Chi tiết đơn hàng',
       category: 'Danh mục',
       product: 'Sản phẩm',
       inventory: 'Tồn kho',

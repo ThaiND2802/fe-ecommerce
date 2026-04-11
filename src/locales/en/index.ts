@@ -125,7 +125,10 @@ const en = {
 
       management: 'Management',
       customer: 'Customer',
+      user: 'User',
+      tenant: 'Tenant',
       order: 'Order',
+      orderItem: 'Order Item',
       category: 'Category',
       product: 'Product',
       inventory: 'Inventory',

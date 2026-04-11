@@ -22,7 +22,10 @@ export const PATH_TREE = {
   MANAGEMENT: {
     ROOT: 'management',
     CUSTOMER: 'customer',
+    USER: 'user',
+    TENANT: 'tenant',
     ORDER: 'order',
+    ORDER_ITEM: 'order-item',
     CATEGORY: 'category',
     PRODUCT: 'product',
     INVENTORY: 'inventory',
@@ -78,9 +81,24 @@ export const ROUTE_TREE: RouteNode[] = [
         Element: lazy(() => import('src/pages/management/customer')),
       },
       {
+        path: PATH_TREE.MANAGEMENT.USER,
+        labelKey: 'menu.user',
+        Element: lazy(() => import('src/pages/management/user')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.TENANT,
+        labelKey: 'menu.tenant',
+        Element: lazy(() => import('src/pages/management/tenant')),
+      },
+      {
         path: PATH_TREE.MANAGEMENT.ORDER,
         labelKey: 'menu.order',
         Element: lazy(() => import('src/pages/management/order')),
+      },
+      {
+        path: PATH_TREE.MANAGEMENT.ORDER_ITEM,
+        labelKey: 'menu.orderItem',
+        Element: lazy(() => import('src/pages/management/order-item')),
       },
       {
         path: PATH_TREE.MANAGEMENT.CATEGORY,

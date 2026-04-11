@@ -24,6 +24,7 @@ const useData = () => {
       navigate(PATH_TREE.HOME)
     },
     onError: () => {
+
       message.error(t.message.loginFail)
     },
   })
@@ -33,6 +34,8 @@ const useData = () => {
       login(values)
     })
   }
+
+
 
   return {
     form,
